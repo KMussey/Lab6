@@ -15,6 +15,7 @@ public class Lab6{
       System.out.println(univ);
       
       boolean run= true;
+      String rb = sc.nextLine();
         while (run){
           String aqs = sc.nextLine();
           
@@ -95,7 +96,7 @@ public class Lab6{
       
       public static void runUniverse(char[] univ){ //method to advance to next gen
          
-         int wSize = 0;
+         int wSize = univ.length;
          
          for (int i = 0; i < wSize; i++){
             if (univ[i] == '0'){
@@ -107,7 +108,7 @@ public class Lab6{
             }else if (i + 1 < wSize && univ[i] == '2' && univ[i + 1] == '.'){
               univ[i] = '.';
               univ[i + 1] = '0';
-            
+              i++; 
             }else if (i + 1 < wSize && univ[i] == '2' && univ[i + 1] == '^'){
                univ[i] = '.';
                univ[i + 1] = '0';
